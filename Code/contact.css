@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    margin: 20px 0;
+}
+
+#contact-us {
+    transition: transform 0.2s;
+}
+
+#contact-us:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-danger {
+    background-color: #ff0057;
+    border-color: #ff0057;
+}
+
+.btn-danger:hover {
+    background-color: #e6004c;
+    border-color: #e6004c;
+}

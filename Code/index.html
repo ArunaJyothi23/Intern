@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="side.css"> <!-- Added side.css -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .navbar {
+            padding: 15px;
+        }
+        .hero {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+        .services img, .projects img {
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .services img:hover, .projects img:hover {
+            transform: scale(1.05);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+        .slider {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            overflow: hidden;
+        }
+        .slider-item {
+            flex: 0 0 auto;
+            width: 30%; /* Adjust the width as needed */
+            margin: 0 10px; /* Adjust margin between images */
+            text-align: center; /* Optional: center images */
+        }
+        .slider-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .slider-item img:hover {
+            transform: scale(1.1);
+        }
+    /* Example styling for the feedback cards */
+    .card {
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .card-title {
+        font-size: 1.25rem;
+        color: #333;
+    }
+    .card-text {
+        font-size: 1rem;
+        color: #666;
+    }
+   
+    .partner-logo {
+        max-width: 100px; /* Adjust the size as needed */
+        margin: 10px; /* Adjust the spacing between logos */
+    }
+
+
+    </style>
+     <script type="text/javascript">
+        function redirectToPage(){
+            window.location.href='contact.html';
+        }
+     </script>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <!-- Include your navbar code here -->
+
+    <!-- Hero Section -->
+    <div class="container hero text-center">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="text-danger">AWARD WINNING</h1>
+                <h2>DIGITAL MARKETING AGENCY</h2>
+                <p>Morbi sed lacus nec risus finibus feugiat at fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus. Morbi sed lacus nec risus finibus feugiat at fermentum.</p>
+                <!-- Contact Us Button - Open Modal -->
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal" id="redirectButton">Contact Us</button>
+                <script type="text/javascript">document.getElementById('redirectButton').addEventListener('click',redirectToPage)</script>
+            </div>
+            <div class="col-md-6">
+                <img src="digital-marketing-and-seo.jpg" alt="Woman Working" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Services Provide For You</h1>
+                <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="1.png" class="card-img-top" alt="Service 1">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="2.jpeg" class="card-img-top" alt="Service 2">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-danger text-white text-center">
+                    <div class="card-body">
+                        <h2>Web Development</h2>
+                        <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh.</p>
+                        <a href="https://fylehq.com" target="_blank" class="btn btn-light" id="contact-us-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>What We Do</h2>
+            </div>
+        </div>
+        <div class="slider mt-4">
+            <div class="slider-item">
+                <img src="hand.jpeg" alt="Service 3">
+            </div>
+            <div class="slider-item">
+                <img src="globe.jpeg" alt="Service 4">
+            </div>
+            <div class="slider-item">
+                <img src="pad.jpeg" alt="Service 5">
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Project Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2>Our Project</h2>
+                <h3>Why We Are Best</h3>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="digital-marketing-and-seo.jpg" class="img-fluid" alt="Project Image" id="project-image">
+            </div>
+            <div class="col-md-6">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action project-detail" onclick="changeProjectImage('project1.jpeg')">
+                        <h4>Genderless Kei – Japan’s Hot</h4>
+                        <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action project-detail bg-danger text-white" onclick="changeProjectImage('project2.jpeg')">
+                        <h4>Better Strategy & Quality</h4>
+                        <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action project-detail" onclick="changeProjectImage('project3.jpeg')">
+                        <h4>Genderless Kei – Japan’s Hot</h4>
+                        <p>Set to launch on the manufacturer’s new A330neo aircraft in 2017, it’s offering lots of</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Stat Cards Section -->
+    <div class="container text-center mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card stat-card" id="stat1">
+                    <div class="card-body">
+                        <h3 class="card-title">199 +    <span class="bi bi-heart-fill text-danger mx-3" title="AB Caley Peace Logo"></span></h3>
+                        <p class="card-text">Satisfied Customers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card" id="stat2">
+                    <div class="card-body">
+                        <h3 class="card-title">1591+ <span class="bi bi-heart-fill text-danger mx-3" title="AB Caley Peace Logo"></span></h3></h3>
+                        <p class="card-text">Days of Operation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card" id="stat3">
+                    <div class="card-body">
+                        <h3 class="card-title">283+ <span class="bi bi-heart-fill text-danger mx-3" title="AB Caley Peace Logo"></span></h3></h3>
+                        <p class="card-text">Complete Projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card stat-card" id="stat4">
+                    <div class="card-body">
+                        <h3 class="card-title">75+ <span class="bi bi-heart-fill text-danger mx-3" title="AB Caley Peace Logo"></span></h3></h3>
+                        <p class="card-text">Won Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Section -->
+        <div class="row mt-5 project-section">
+            <div class="col-md-6">
+                <div class="project-image" id="project-image">
+                    <img src="digit.jpeg" alt="Project Image" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action project-detail" data-image="image1.jpg">
+                        <h4 class="mb-1">Project 1</h4>
+                        <p class="mb-1">Details about project 1</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action project-detail" data-image="image2.jpg">
+                        <h4 class="mb-1">Project 2</h4>
+                        <p class="mb-1">Details about project 2</p>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action project-detail" data-image="image3.jpg">
+                        <h4 class="mb-1">Project 3</h4>
+                        <p class="mb-1">Details about project 3</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Client Feedback Section -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2>Client Feedback</h2>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="card-text">"Excellent service! The team really understood our needs and delivered beyond our expectations."</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Jane Smith</h5>
+                    <p class="card-text">"Very professional approach and timely delivery. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">David Johnson</h5>
+                    <p class="card-text">"Great communication throughout the project. Will definitely work with them again."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ <!-- Footer Section -->
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="text-center bg-danger py-4"> <!-- Updated background color to red and added padding -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="mb-2 text-white">Our Partners:</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <!-- Replace img tags with Bootstrap Icons -->
+                    <span class="bi bi-people-fill text-light mx-3" title="HR Logo"></span>
+                    <span class="bi bi-gear-fill text-light mx-3" title="DS Logo"></span>
+                    <span class="bi bi-award-fill text-light mx-3" title="Design Exclusive Logo"></span>
+                    <span class="bi bi-building text-light mx-3" title="Fort Dexon Logo"></span>
+                    <span class="bi bi-layers-fill text-light mx-3" title="Barbcue Logo"></span>
+                    <span class="bi bi-heart-fill text-light mx-3" title="AB Caley Peace Logo"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <!-- JavaScript Section -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="side.js"></script>
+    <script src="contact.js"></script> <!-- Include your side.js file -->
+</body>
+</html>
